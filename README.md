@@ -1,1 +1,1 @@
-<h1>Weather Application</h1>
+<h1 align="center">Weather Application</h1>
