@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+body{
+    background-image: url(https://wallpapercave.com/wp/wp6303878.jpg);
+    /* background: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Jost', sans-serif;
+}
+
+html{
+    font-size: 100%;
+    height: 100%;
+}
+
+html{
+    background: #eee;
+}
+.main-box{
+    display: flex;
+}
+.box{
+    height: 90vh;
+    width: 20vw;
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+    background: #181818;
+    opacity: 0.6;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+}
+
+.box-1{
+    height: 90vh;
+    width: 32.5vw;
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+    background-image: url(https://images.unsplash.com/photo-1545418074-f42c7e34c75a?w=420&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8MTE2MzU3MTN8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.rain {
+    background-image: url(https://images.unsplash.com/photo-1620385019253-b051a26048ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJhaW58ZW58MHx8MHx8fDA%3D);
+}
+
+.clouds{
+    background-image: url(https://e1.pxfuel.com/desktop-wallpaper/258/717/desktop-wallpaper-top-cloudy-weather-cloudy-day.jpg);
+}
+
+.snow{
+    background-image: url(https://e1.pxfuel.com/desktop-wallpaper/894/588/desktop-wallpaper-tall-trees-covered-in-snow-on-a-windy-crafter-tall-winter-trees.jpg);
+}
+
+.smoke{
+    background-image: url(https://c0.wallpaperflare.com/preview/443/146/567/view-of-buildings-at-night-thumbnail.jpg);
+}
+
+.clear{
+    background-image: url(https://w0.peakpx.com/wallpaper/832/608/HD-wallpaper-cloud-in-blue-skies-august-clear-day-florida-natural-sky-sunny-weather.jpg);
+}
+
+.mist{
+    background-image: url(https://pbs.twimg.com/media/CyV6Xx-UQAAIrds.jpg);
+}
+
+.haze{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/027/104/838/large_2x/dutch-landscape-with-misty-weather-and-trees-on-a-green-field-free-photo.jpg);
+}
+
+.fog{
+    background-image: url(https://images.unsplash.com/photo-1500765085688-0c5baefdb52a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZvZ2d5JTIwd2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D);
+}
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: white;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+
+.wave.three{
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+
+.wave.two{
+    animation: drift 7000ms infinite linear;
+    z-index: 3 !important;
+    opacity: 0.1;
+}
+
+.box:after{
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0,0,0);
+}
+
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+.info{
+    position: absolute;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    z-index: 4;
+}
+.location{
+    margin-top: -5.5rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 5rem;
+    text-transform: capitalize;
+}
+.weather-icon{
+    margin-top:20px;
+    margin-bottom: 20px;
+    color:white;
+    animation: rotates 3s linear infinite alternate;
+}
+@keyframes rotates{
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translateX(0.5rem);
+    }
+}
+#date{
+    text-align: center;
+    margin-top: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.temp{
+     margin-top: 1rem; 
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.tempmin_max{
+    color: white;
+    text-align: center;
+    margin-top: 0.3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+#weathercon{
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+#weathercon.fas{
+    font-size: 6rem;
+    animation: fas-anime 3s linear infinite alternate;
+}
+@keyframes fas-anime{
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
+@media (max-width :600px){
+    .box{
+        width: 90vw;
+        height: 80vh;
+    }
+
+    .wave{
+        top: 85%;
+    }
+
+    #weathercon{
+        font-size: 5em;
+    }
+
+    .info{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-height:500px){
+    .box{
+        height: 80vh;
+    }
+
+    .wave{
+        top:115%;
+    }
+}
+
+body>span{
+    width: 100vw;
+    text-align: center;
+    color: grey;
+}
+
+.inputData{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputFeild{
+    width: 50%;
+    height: 30px;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+.errorMsg{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
